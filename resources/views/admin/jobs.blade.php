@@ -34,7 +34,7 @@
             </div>
             <div class="p-3">
               <label>Description </label>
-              <input type="text" class="text-black w-25" name="description" placeholder="Description" required="">
+              <textarea type="text" class="text-black w-25" name="description" placeholder="Description" required=""></textarea>
             </div>
             <div class="p-3">
               <label>Image</label>
