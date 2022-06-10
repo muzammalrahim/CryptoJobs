@@ -22,12 +22,12 @@
               </div>
               <div class="p-3">
                 <label class="w-25">Description </label>
-                <textarea type="number" class="text-black w-25" name="description" value="{{ $job->description }}"></textarea>
+                <textarea type="text" class="text-black w-25" name="description" value="{{ $job->description }}"></textarea>
               </div>
-              <div class="p-3">
+              <!-- <div class="p-3">
                 <label>Old image</label>
                 <img class="w-25" height="150" width="150" src="jobsimages/{{ $job->image }}" alt="old image">
-              </div>
+              </div> -->
               <div class="p-3">
                 <label>Change Image</label>
                 <input type="file" name="file">
