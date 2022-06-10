@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JobsController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.index');
 });
+
+Route::get('/home',[HomeController::class, 'showJobs']);
+
+Route::get('/jobs', [JobsController::class, 'addJobs']);
+Route::post('/upload_jobs', [JobsController::class, 'uploadJobs']);
+Route::get('/job_list', [JobsController::class, 'jobList']);
+Route::get('/job_delete/{id}', [JobsController::class, 'deleteJob']);
+Route::get('/job_update/{id}', [JobsController::class, 'updateJob']);
+Route::post('/job_edit/{id}', [JobsController::class, 'editJob']);
